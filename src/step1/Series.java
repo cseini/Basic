@@ -32,7 +32,7 @@ public class Series {
 				}
 				System.out.println(result+sum);
 				break;
-				default :System.out.println("ERROR");break;
+				default :System.out.println("잘못입력하셨습니다."); break;
 			}
 		}
 	}

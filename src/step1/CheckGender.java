@@ -47,7 +47,7 @@ public class CheckGender{
 					}
 					System.out.println(result+gender);
 				break;
-				default : break;
+				default : System.out.println("잘못입력하셨습니다."); break;
 			}
 		}
 	}

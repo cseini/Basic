@@ -30,7 +30,7 @@ public class Calendar {
 					}
 					System.out.println("말일이 "+month+"월 "+lastday+"입니다.");
 					break;
-					default: break;
+					default: System.out.println("잘못입력하셨습니다."); break;
 			}
 		}
 	}
