@@ -6,7 +6,7 @@ package step2;
  */
 public class Seq013 {
 	public static void main(String[] args) {
-		int num = 0, num1 = 1, num2 = 1, sum = 0;
+		int num = 0, num1 = 1, sum = 0;
 		String result = "";
 		for (int i = 1; i <= 20; i++) {
 			num1+=num;
