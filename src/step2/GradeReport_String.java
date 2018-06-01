@@ -1,26 +1,34 @@
 package step2;
 import java.util.Scanner;
-public class GradeReport {
-	public static int[] input(Scanner scan) {
-		int[] result = new int[3];
+public class GradeReport_String {
+	public static String input(Scanner scan) {
+		String result = "";
+		int kor = 0, eng = 0, math = 0;
 		System.out.print("국어점수? : ");
-		result[0] = scan.nextInt();
+		kor = scan.nextInt();
 		System.out.print("영어점수? : ");
-		result[1] = scan.nextInt();
+		eng = scan.nextInt();
 		System.out.print("수학점수? : ");
-		result[2] = scan.nextInt();
+		math = scan.nextInt();
+		result = kor+","+eng+","+math;
 		return result;
 	}
-	public static int[] score(int[] input) {
-		int[] result = new int[2];
-		int sum = input[0]+input[1]+input[2], avr = sum/3;
-		result[0]=sum;
-		result[1]=avr;
-		return result;
+	public static String score(String input) {
+		String str = input;
+		String[] strs = str.split(",");
+		int kor = Integer.parseInt(strs[0]);
+		int eng = Integer.parseInt(strs[1]);
+		int math = Integer.parseInt(strs[2]);		
+		int sum = kor+eng+math, avr = sum/3;
+		String sumavr = sum+","+avr;
+		return sumavr;
 	}
-	public static String getGrade(int[] score) {
+	public static String grade(String score) {
 		String result = "", grade = "";
-		switch(score[1]/10){
+		String[] scores = score.split(",");
+		int sum = Integer.parseInt(scores[0]);
+		int avr = Integer.parseInt(scores[1]);
+		switch(avr/10){
 			case 9: grade = "A"; break;
 			case 8: grade = "B"; break;
 			case 7: grade = "C"; break;
@@ -35,9 +43,11 @@ public class GradeReport {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("이름 ?\n");
 		String name = scan.next();
-		int[] score = score(input(scan));
-		String grade = getGrade(score);
-		int sum=score[0], avr=score[1];
+		String score = score(input(scan));
+		String grade = grade(score);
+		String[] scores = score.split(",");
+		int sum = Integer.parseInt(scores[0]);
+		int avr = Integer.parseInt(scores[1]);
 		System.out.printf("*********************************************\n");
 		System.out.printf("|   이름   |   총점   |   평균   |   등급   |\n");
 		System.out.printf("---------------------------------------------\n");
