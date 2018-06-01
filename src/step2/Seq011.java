@@ -18,7 +18,7 @@ public class Seq011 {
 				result=i+"-";
 				oddsum+=i;
 				break;
-			default:break;
+			default:System.out.println("Error");break;
 			}
 			System.out.print(result);
 		}
