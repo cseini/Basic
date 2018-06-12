@@ -8,13 +8,13 @@ public class Example19 {
 		int num = s.nextInt();
 		int cnt = String.valueOf(num).length();
 		int num_cnt = 0;
-		for(int i=0;i<cnt;i++) {
+		/*for(int i=0;i<cnt;i++) {
 			 num_cnt = num.charAt(i);
 			 for(int j=0;j<num_cnt;j++) {
 				 System.out.print("*");
 			 }
 			 System.out.println();
-		}
+		}*/
 		System.out.println(num_cnt);
 	}
 }
